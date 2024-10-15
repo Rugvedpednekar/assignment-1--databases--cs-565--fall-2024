@@ -25,3 +25,8 @@ SELECT spice_name
 from spices      
 WHERE spice_name LIKE '%cinnamon%';
 -- Get the brand name of the Sumac spice and the name and URL of the store where it was purchased.
+SELECT sp.brand, st.store_name, st.url_address
+FROM spices_purchased s, store_addresses st, spices sp
+WHERE s.spice_name = 'Sumac'
+AND s.store_id = st.store_id 
+AND sp.barcode = s.barcode;
