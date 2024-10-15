@@ -3,6 +3,9 @@ SELECT store_name, url_address
 from store_addresses
 WHERE store_id IN (SELECT store_id FROM spices_purchased);  
 -- Get the name of the store and its URL where spices were purchased, including their barcode.
+SELECT spices_purchased.store_name, store_addresses.url_address, spices_purchased.barcode
+FROM spices_purchased
+JOIN store_addresses ON spices_purchased.store_id = store_addresses.store_id;
 
 -- Get stores who only have an online address.
 select store_name
