@@ -1,4 +1,7 @@
 -- Get the name of the store and its URL where any spices were purchased.
+SELECT DISTINCT s.store_name, st.url_address
+FROM spices_purchased
+JOIN stores st ON s.store_id = st.store_id;
 
 -- Get the name of the store and its URL where spices were purchased, including their barcode.
 

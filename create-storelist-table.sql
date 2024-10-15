@@ -1,6 +1,6 @@
 CREATE TABLE IF NOT EXISTS stores_list
  (
-    store_id   INT NOT NULL,
+    store_id   VARCHAR(64)   NOT NULL,
     store_name VARCHAR(255) NOT NULL,
     comment    VARCHAR(255)
     
